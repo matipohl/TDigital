@@ -1,0 +1,21 @@
+Ejercicio 1:
+0,2,1,4,2,6,3,8,4,10
+
+Ejercicio 2:
+4,10,3,8,2,6,1,4
+
+Ejercicio 3:
+0,2,2,6,4,10
+
+Ejercicio 4:
+["Dojo",0,5,"Dojo",2]
+
+Ejercicio 5: 
+[-1,0,25,-3,4]
+
+Ejercicio 6:
+[0,1,2,3]
+
+Ejercicio 7:
+[1,2]
+
