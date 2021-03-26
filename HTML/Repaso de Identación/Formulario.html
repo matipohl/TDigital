@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Mi formulario de registro</h1>
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="cpassword">Confirmar contraseña:</label><br>
+        <input type="cpassword" id="cpassword" name="cpassword"><br>
+
+        <label for="date">Cumpleaños</label><br>
+        <input type="date" id="date" name="date"><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+
+        <label for="description">Una breve descripción de ti:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+
+        <label for="language">Lenguaje favorito:</label>
+        <input list="language" name="language">
+        <datalist id="language">
+            <option value="Javascript">
+            <option value="Java">
+            <option value="Scheme">
+            <option value="Prolog">
+            <option value="C++">
+        </datalist><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
