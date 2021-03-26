@@ -24,7 +24,7 @@
         <input type="password" id="password" name="password"><br>
 
         <label for="cpassword">Confirmar contraseña:</label><br>
-        <input type="cpassword" id="cpassword" name="cpassword"><br>
+        <input type="password" id="cpassword" name="cpassword"><br>
 
         <label for="date">Cumpleaños</label><br>
         <input type="date" id="date" name="date"><br>
@@ -42,14 +42,12 @@
         <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
 
         <label for="language">Lenguaje favorito:</label>
-        <input list="language" name="language">
-        <datalist id="language">
-            <option value="Javascript">
-            <option value="Java">
-            <option value="Scheme">
-            <option value="Prolog">
-            <option value="C++">
-        </datalist><br>
+        <select name="language" id="language">
+            <option value="C++">C++</option>
+            <option value="JS">JS</option>
+            <option value="Prolog">Prolog</option>
+            <option value="R">R</option>
+        </select><br>
 
         <input type="submit" value="Enviar">
     </form>
