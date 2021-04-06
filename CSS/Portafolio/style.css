@@ -13,14 +13,35 @@ div.header {
 }
 
 div.header div.title {
-    height: 100px;
+    height: 60px;
     width: 50%;
     display: inline-block;
     margin-right: 80px;
 }
 
+div.header div.title h1 {
+    display: block;
+    font-size: 2.2em;
+    margin-block-start: 0.30em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 30px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+div.header div.subtitle h2 {
+    padding-top: 20px;
+    display: block;
+    font-size: 1.2em;
+    margin-block-start: 0.20em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 div.header div.subtitle {
-    height: 100px;
+    height: 60px;
     width: 40%;
     display: inline-block;
     vertical-align: top;
@@ -29,7 +50,10 @@ div.header div.subtitle {
 div.content-1 #img-1 {
     width: 43%;
     display: inline-block;
-    margin: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 15px;
+    border: 4px solid #bfbfbf;
 }
 
 div.content-1 div.about {
@@ -41,7 +65,7 @@ div.content-1 div.about {
 
 div.content-1 div.about div.about-text {
     background-color: #ded0dd;
-    padding-bottom: 25px;
+    padding: 5px 10px 10px 10px;
 }
 
 div.content-1 div.about div.about-text p {
@@ -67,9 +91,13 @@ div.content-1 div.about div.title-box h3 {
     padding-top: 10px;
 }
 
+div.content-2 {
+    padding-left: 17px;
+}
+
 div.content-2 div.portfolio {
     display: inline-block;
-    width: 284px;
+    width: 274px;
     min-height: 520px;
     margin: 5px;
 }
@@ -164,6 +192,19 @@ div.portfolio div.portfolio-link-btn {
     margin-bottom: 15px;
 }
 
+div.portfolio div.portfolio-link-btn a {
+    background-color: #407d61;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 div.content-3 {
     background-color: #f2f2f2;
 }
@@ -187,6 +228,11 @@ div.content-3 ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding: 0px 27px 0px 27px;
+}
+
+div.content-3 ul li a {
+    color: black;
+    font-style: italic;
 }
 
 div.content-3 img.content-3-img {
