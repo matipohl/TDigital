@@ -1,0 +1,190 @@
+div.wrapper {
+    width: 900px;
+    min-height: 700px;
+    margin: 0px auto;
+}
+
+div.main-content {
+    background-image: radial-gradient( #6f5964, #1b0b0f);
+}
+
+div.header {
+    background-color: #f2f2f2;
+}
+
+div.header div.title {
+    height: 100px;
+    width: 50%;
+    display: inline-block;
+    margin-right: 80px;
+}
+
+div.header div.subtitle {
+    height: 100px;
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.content-1 #img-1 {
+    width: 43%;
+    display: inline-block;
+    margin: 15px;
+}
+
+div.content-1 div.about {
+    vertical-align: top;
+    display: inline-block;
+    height: 305.84px;
+    width: 49%;
+}
+
+div.content-1 div.about div.about-text {
+    background-color: #ded0dd;
+}
+
+div.content-1 div.about div.about-text p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+div.content-1 div.about div.title-box {
+    width: auto;
+    height: 50px;
+    vertical-align: top;
+    margin-top: 15px;
+    background-image: linear-gradient(#b3b3b7, #8a8995, #b3b3b7);
+    font-size: 20px;
+    color: #fffaf6;
+}
+
+div.content-1 div.about div.title-box h3 {
+    padding-left: 10px;
+}
+
+div.content-2 div.portfolio {
+    display: inline-block;
+    width: 284px;
+    min-height: 520px;
+    margin: 5px;
+}
+
+div.portfolio {
+    vertical-align: top;
+}
+
+div.portfolio div.portfolio-title {
+    width: auto;
+    height: 50px;
+    background-image: linear-gradient(#b3b3b7, #8a8995, #b3b3b7);
+}
+
+div.portfolio div.portfolio-content {
+    width: auto;
+    min-height: 380px;
+    text-align: justify;
+}
+
+div.portfolio-content p {
+    padding: 0px 10px 0px 10px;
+}
+
+div.portfolio-content #la-mode {
+    width: 100%;
+}
+
+div.portfolio-content #family-contacts {
+    width: 100%;
+}
+
+div.portfolio-content #five-eleven {
+    width: 100%;
+}
+
+div.portfolio div.portfolio-tech-title {
+    width: auto;
+    height: 50px;
+    background-image: linear-gradient(#b3b3b7, #8a8995, #b3b3b7);
+}
+
+div.portfolio div.portfolio-tech-list ul {
+    list-style-type: none;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0px 27px 0px 27px;
+}
+
+div.portfolio div.portfolio-tech-list ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+div.portfolio-tech-list ul li img.img-tech {
+    width: 100%;
+}
+
+div.portfolio div.portfolio-link-btn {
+    min-height: 30px;
+    width: auto;
+    text-align: center;
+}
+
+div.content-3 {
+    background-color: #f2f2f2;
+}
+
+div.content-3 p {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+
+div.content-3 ul {
+    text-align: center;
+    width: auto;
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0px 27px 0px 27px;
+}
+
+div.content-3 img.content-3-img {
+    height: 17px;
+    margin-bottom: -4px;
+}
+
+div.content-3 li {
+    display: inline-block;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
