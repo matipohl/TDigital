@@ -1,0 +1,68 @@
+1. Ejercicio 1
+    2
+    3
+    Undefined
+
+2. Ejercicio 2
+    6
+    10
+
+3. Ejercicio 3
+    3
+    7
+
+4. Ejercicio 4
+    15
+    15
+    10
+    15
+
+5. Ejercicio 5
+    0
+    2
+    4
+    6
+    8
+    10
+    12
+    14
+
+6. Ejercicio 6
+    0
+    0
+    0
+    1
+    0
+    2
+
+7. Ejercicio 7
+    0
+    0
+    0
+    0
+    1
+    2
+    0
+    2
+    4
+    Undefined
+
+8. Ejercicio 8
+    0
+    0
+    0
+    0
+    0
+    0
+    1
+    2
+    3
+    4
+    0
+    2   
+    4
+    6
+    8
+    15
+
+
