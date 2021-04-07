@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.wrapper {
+    margin: auto;
+    width: 691px;
+    min-height: 610px;
+    padding: 20px;
+    background-color: #d4d2ae;
+}
+
+div.title {
+    margin: auto;
+    min-height: 80px;
+    width: 645px;
+    text-align: center;
+}
+
+div.title h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 46px;
+}
+
+div.title img.title-img {
+    width: 100px;
+}
+
+div.title img#catandninja {
+    background-color: white;
+}
+
+div.grid {
+    margin: 0px auto;
+    width: 645px;
+    min-height: 517px;
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+div.grid div.cube {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 4px;
+}
+
+div.cube img.img-grid-1 {
+    width: 84.9%;
+    border: #82b4ee 8px solid;
+    outline: solid 2px black;
+}
+
+div.cube img.img-grid-2 {
+    width: 98%;
+    background-color: #f36870;
+    outline: black 2px solid;
+}
