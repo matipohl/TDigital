@@ -1,0 +1,104 @@
+* {
+    border: blueviolet dotted 1px;
+}
+
+div.wrapper {
+    width: 975px;
+    min-height: 400px;
+}
+
+div.header {
+    height: 120px;
+    width: 975px;
+    display: inline-block;
+    background-color: #245076;
+}
+
+div.header img.img-home {
+    width: 350px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+div.header div.search-and-opt {
+    width: 350px;
+    height: 120px;
+    display: inline-block;
+    margin-left: 230px;
+    vertical-align: top;
+}
+
+div.search-and-opt p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    color: white;
+    text-align: right;
+}
+
+div.search-and-opt div.search {
+    width: 350px;
+    height: 65px;
+    background-color: #444444;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+}
+
+div.search input#search {
+    margin-top: 11px;
+    margin-left: 40px;
+    height: 40px;
+    width: 240px;
+    font-size: 11px;
+    text-align: center;
+}
+
+div.search button#submit {
+    height: 35px;
+    width: 45px;
+    background-color: #245076;
+    color: white;
+    border-radius: 8px;
+}
+
+div.menu {
+    margin: 0px auto;
+    width: 975px;
+    height: 45px;
+}
+
+div.content-1 {
+    margin: 0px auto;
+    width: 975px;
+    min-height: 400px;
+    background-color: #245076;
+}
+
+div.content-1 div.nav {
+    width: 300px;
+    min-height: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.content-1 div.about {
+    width: 588px;
+    min-height: 350px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.content-2 div.text-box:first-of-type {
+    margin-left: 86px;
+}
+
+div.content-2 div.text-box {
+    margin: 0px auto;
+    width: 40%;
+    min-height: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.footer {
+    height: 100px;
+}
