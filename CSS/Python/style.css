@@ -1,7 +1,3 @@
-* {
-    border: blueviolet dotted 1px;
-}
-
 div.wrapper {
     width: 975px;
     min-height: 400px;
@@ -24,7 +20,7 @@ div.header div.search-and-opt {
     width: 350px;
     height: 120px;
     display: inline-block;
-    margin-left: 230px;
+    margin-left: 220px;
     vertical-align: top;
 }
 
@@ -61,23 +57,56 @@ div.search button#submit {
 }
 
 div.menu {
+    padding-top: 10px;
     margin: 0px auto;
     width: 975px;
-    height: 45px;
+    height: 80px;
+    background-color: #245076;
+}
+
+div.box-menu {
+    width: 850px;
+    height: 57px;
+    margin-left: 70px;
+    background-color: #407bad;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px black;
+}
+
+div.box-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 25px;
+    color: white;
+    font-size: 21px;
 }
 
 div.content-1 {
     margin: 0px auto;
     width: 975px;
-    min-height: 400px;
+    min-height: 350px;
     background-color: #245076;
 }
 
 div.content-1 div.nav {
-    width: 300px;
+    width: 200px;
     min-height: 300px;
     display: inline-block;
     vertical-align: top;
+    margin-left: 100px;
+}
+
+div.nav ul {
+    padding-inline-start: 10px;
+}
+
+div.nav ul li {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    list-style-position: inside;
 }
 
 div.content-1 div.about {
@@ -85,6 +114,25 @@ div.content-1 div.about {
     min-height: 350px;
     display: inline-block;
     vertical-align: top;
+}
+
+div.about p {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+div.about p.yellow-text {
+    color: yellow;
+    font-size: 19px;
+    font-style: italic;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+div.about p.white-text {
+    color: white;
+    font-size: 17px;
 }
 
 div.content-2 div.text-box:first-of-type {
@@ -97,8 +145,66 @@ div.content-2 div.text-box {
     min-height: 250px;
     display: inline-block;
     vertical-align: top;
+    text-align: center;
+}
+
+div.text-box hr.rounded {
+    width: 80%;
+    border-top: 6px solid #73a7d5;
+    border-radius: 5px;
+}
+
+div.text-box p {
+    margin: auto;
+    width: 85%;
+}
+
+div.text-box ul {
+    padding-inline-start: 20px;
+}
+
+div.text-box ul li {
+    margin: auto;
+    width: 70%;
+}
+
+div.text-box ul li span.txt-li {
+    color: #8db7dd;
+}
+
+div.text-box span.txtBlue {
+    color: skyblue;
+    font-size: small;
 }
 
 div.footer {
     height: 100px;
+    background-image: linear-gradient(#245077, #3375AC);
+}
+
+div.footer ul {
+    display: inline-block;
+    margin-left: 165px;
+    padding-inline-start: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+div.footer ul li {
+    margin-right: 20px;
+    display: inline-block;
+    list-style-type: none;
+    color: #7BAEDB;
+}
+
+div.footer ul li p {
+    font-size: 20px
+}
+
+div.footer span.copyright {
+    text-align: center;
+    font-size: x-small;
+    display: flex;
+    justify-content: center;
+    color: #7BAEDB;
 }
