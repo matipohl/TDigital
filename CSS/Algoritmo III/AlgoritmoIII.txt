@@ -1,0 +1,26 @@
+Ejercicio 1
+5
+
+Ejercicio 2
+[2, 2, 5]
+[2, 2, 5]
+[6, 8, 5]
+[6, 8, 5]
+
+Ejercicio 3
+[2, 2, 5]
+
+Ejercicio 4
+True
+
+Ejercicio 5
+["Coding", "Coding", "Coding", "Coding"]
+
+Ejercicio 6
+[5, "Coding", "Dojo", 4]
+
+Ejercicio 7
+10
+
+Ejercicio 8
+Undefined
