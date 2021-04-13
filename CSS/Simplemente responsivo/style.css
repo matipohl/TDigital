@@ -14,37 +14,37 @@ p.yellow {
 }
 
 @media only screen and (max-width: 480px) {
-    p.lg {
+    .lg {
         display: none;
     }
-    p.md {
+    .md {
         display: none;
     }
-    p.sm {
+    .sm {
         display: block;
     }
 }
 
 @media only screen and (min-width: 481px) {
-    p.lg {
+    .lg {
         display: none;
     }
-    p.md {
+    .md {
         display: block;
     }
-    p.sm {
+    .sm {
         display: none;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    p.sm {
+    .sm {
         display: none;
     }
-    p.md {
+    .md {
         display: none;
     }
-    p.lg {
+    .lg {
         display: block;
     }
 }
