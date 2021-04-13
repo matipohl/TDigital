@@ -1,0 +1,50 @@
+h1 {
+    border: 1px solid coral;
+    background-color: #B3B3B3;
+}
+
+p {
+    border: 1px solid coral;
+    background-color: #CCCCCC;
+}
+
+p.yellow {
+    border: 1px solid coral;
+    background-color: #F8F896;
+}
+
+@media only screen and (max-width: 480px) {
+    p.lg {
+        display: none;
+    }
+    p.md {
+        display: none;
+    }
+    p.sm {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    p.lg {
+        display: none;
+    }
+    p.md {
+        display: block;
+    }
+    p.sm {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    p.sm {
+        display: none;
+    }
+    p.md {
+        display: none;
+    }
+    p.lg {
+        display: block;
+    }
+}
