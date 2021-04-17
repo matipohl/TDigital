@@ -67,3 +67,80 @@ function paresImpares(x) {
         }
     }
 }
+
+//incrementa los segundos
+function plusOneOdd(x) {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] % 2 != 0) {
+            x[i] += 1;
+        }
+        console.log(x[i]);
+    }
+    return x;
+}
+
+//longitudes previas
+function longString(x) {
+    for (var i = x.length - 1; i > 0; i--) {
+        x[i] = x[i - 1].length;
+    }
+    return x;
+}
+
+//agrega 7
+function agregaSiete(x) {
+    var y = [];
+    for (var i = 0; i < x.length; i++) {
+        y.push(x[i] + 7);
+    }
+    return y;
+}
+
+//array inverso
+function reverseArray(x) {
+    return x.reverse();
+}
+
+//Negativos
+
+function allNegatives(x) {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] > 0) {
+            x[i] *= -1;
+        }
+    }
+    return x;
+}
+
+//Siempre hambriento
+function hungry(x) {
+    var count = 0;
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] == "comida") {
+            console.log("yummy");
+            count++;
+        }
+    }
+    if (count == 0) {
+        console.log("tengo hambre");
+    }
+}
+
+//cambiar hacia el centro
+function cambiarHaciaCentro(x) {
+    var temp;
+    for (var i = 0; i <= 3; i += 2) {
+        temp = x[i];
+        x[i] = x[x.length - 1 - i];
+        x[x.length - 1 - i] = temp;
+    }
+    console.log(x);
+}
+
+//escala array
+function escalar(x, y) {
+    for (var i = 0; i < x.length; i++) {
+        x[i] *= y;
+    }
+    return x;
+}
