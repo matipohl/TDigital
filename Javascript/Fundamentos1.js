@@ -92,3 +92,38 @@ function noNegativos(x) {
     }
     return x;
 }
+
+//Min max avg
+function maxMinAvg(x) {
+    var sum = 0;
+    for (var i = 0; i < x.length; i++) {
+        sum += x[i];
+    }
+
+    console.log("Promedio: " + sum / x.length)
+    console.log("Máximo: " + Math.max(...x));
+    console.log("Mínimo: " + Math.min(...x));
+}
+
+//Swap values
+function swapValues(x) {
+    var temp = 0;
+    if (x.length < 2) {
+        return console.log("No cumple extensión mínima requerida");
+    }
+    temp = x[0];
+    x[0] = x[x.length - 1];
+    x[x.length - 1] = temp;
+
+    return x;
+}
+
+//Int to string
+function intToDojo(x) {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] < 0) {
+            x[i] = "Dojo";
+        }
+    }
+    return x;
+}
