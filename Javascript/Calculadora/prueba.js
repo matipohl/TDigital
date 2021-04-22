@@ -1,19 +1,17 @@
-var cadena = "";
+var str = "";
 
 function crearString(clickedId) {
-    var simbolo = false;
     var newElement = document.getElementById(clickedId).id;
+    var operator = false;
 
-    if (newElement == "+" || newElement == "-" || newElement == "*" || newElement == "/") {
-        console.log("hay un símbolo");
-    }
-
-    cadena += newElement;
-    document.getElementById("txtNumeros").value = cadena;
+    str += newElement;
+    document.getElementById("txtNumeros").value = str;
 }
 
 
 function solucion() {
-    var resultado = eval(cadena);
+    var resultado = eval(str);
+
+    str = resultado;
     document.getElementById("txtNumeros").value = resultado;
 }
