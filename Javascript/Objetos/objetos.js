@@ -1,7 +1,5 @@
 var users = [{ name: "Michael", age: 37 }, { name: "John", age: 30 }, { name: "David", age: 27 }];
 
-
-
 //¿Cómo harías print/log de la edad de John?
 function getAgebyName(str) {
     for (var i = 0; i < users.length; i++) {
