@@ -49,26 +49,30 @@
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
                         <input type="email" class="form-control" id="email">
+                        <p id="validation-email"></p>
                     </div>
                     <div class="mb-3">
                         <label for="confirm-email" class="form-label">Confirmar E-mail</label>
                         <input type="email" class="form-control" id="confirm-email">
+                        <p id="validation-confirm-email"></p>
                     </div>
                     <label for="phone" class="form-label">Número de Celular</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">+569</div>
+                            <input type="text" class="form-control" id="phone">
                         </div>
-                        <input type="text" class="form-control" id="phone">
                     </div>
+                    <p id="validation-phone"></p>
                     <label for="confirm-phone" class="form-label">Confirmar Número de Celular</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">+569</div>
+                            <input type="text" class="form-control" id="confirm-phone">
                         </div>
-                        <input type="text" class="form-control" id="confirm-phone">
                     </div>
-                    <button type="submit" onclick="rutValidator()" class="btn btn-primary float-right mb-3">Siguiente</button>
+                    <p id="validation-confirm-phone"></p>
+                    <button type="submit" onclick="saveData()" class="btn btn-primary float-right mb-3">Siguiente</button>
                 </form>
             </div>
 
