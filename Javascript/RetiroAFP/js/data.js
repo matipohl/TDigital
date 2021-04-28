@@ -177,7 +177,6 @@ function numberAccountValidator() {
     let account = document.getElementById("account").value;
     let typeAccount = document.getElementById("type-account").selectedIndex;
     let rut = document.getElementById("rut").value;
-    // var listAccountType = document.getElementById("type-account").value;
     let retromsg = document.getElementById("validation-account");
     let inputa = document.getElementById("account");
 
@@ -218,9 +217,10 @@ function amountValidator() {
     let retromsg = document.getElementById("validation-amount");
     let inputa = document.getElementById("amount");
     let patt = /^[0-9]{1,}$/;
+    let maxAmount = 4500000;
 
     if (patt.test(amount) == true) {
-        if (amount > 0 && amount <= 4500000) {
+        if (amount > 0 && amount <= maxAmount) {
             retromsg.innerHTML = "Monto ingresado correctamente";
             retromsg.style.color = "Green";
             inputa.style = "border-color: Green";
@@ -295,8 +295,6 @@ function showData(client, bankTransaction) {
     let accountType = document.getElementById("display-type-account");
     let account = document.getElementById("display-accout");
     let amount = document.getElementById("display-amount");
-
-    console.log(document.getElementById("display-type-account"));
 
     rut.innerHTML = client.rut;
     email.innerHTML = client.email;
