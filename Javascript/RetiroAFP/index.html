@@ -13,93 +13,160 @@
     <script src="js/data.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Load ScrollitJS -->
+    <script src='js/jquery-1.10.2.min.js' type='text/javascript'></script>
+    <script src='js/scrollIt.min.js' type='text/javascript'></script>
+    <script src='js/scrollCall.js' type='text/javascript'></script>
 </head>
 
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-4">NO + AFP</h1>
-            <p class="lead">Formulario de retiro de fondos de pensiones</p>
-            <hr class="my-4">
-            <p>Hasta que la dignidad se haga costumbre</p>
-        </div>
 
+    <div class="jumbotron bg-warning">
+        <div class="container text-center">
+            <h1 class="display-3 font-weight-bold">NO + AFP</h1>
+            <p class="font-weight-bold">Formulario de retiro de Fondos de Pensiones</p>
+            <p><a class="btn btn-lg bg-warning font-weight-bold" data-scroll-goto='0' role="button">Comienza aquí &raquo;</a></p>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6 mb-4">
-                <h1 class="mb-4">Ingresa tus datos personales</h1>
-                <form name="client-data">
-                    <div class="mb-3">
-                        <label for="rut" class="form-label">RUT (sin puntos ni guión)</label>
-                        <input type="text" class="form-control" id="rut" required>
-                        <p id="validation-rut"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="serial-number" class="form-label">Número de serie o Documento</label>
-                        <input type="text" class="form-control" id="serial-number">
-                        <p id="validation-serial-number"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirm-serial-number" class="form-label">Confirmar Número de serie o Documento</label>
-                        <input type="text" class="form-control" id="confirm-serial-number">
-                        <p id="validation-confirm-serial-number"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email">
-                        <p id="validation-email"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirm-email" class="form-label">Confirmar E-mail</label>
-                        <input type="email" class="form-control" id="confirm-email">
-                        <p id="validation-confirm-email"></p>
-                    </div>
-                    <label for="phone" class="form-label">Número de Celular</label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">+569</div>
-                            <input type="text" class="form-control" id="phone">
+    <section data-scroll-index='0' class="py-4">
+        <div class="container border border-warning rounded" id="part-one">
+            <div class="row py-5">
+                <div class="col-6 mx-auto">
+                    <h1 class="mb-4">Ingresa tus datos personales</h1>
+                    <form name="client-data">
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">RUT (sin puntos ni guión)</label>
+                            <input type="text" class="form-control" id="rut" placeholder="12345678k" required>
+                            <p id="validation-rut"></p>
                         </div>
-                    </div>
-                    <p id="validation-phone"></p>
-                    <label for="confirm-phone" class="form-label">Confirmar Número de Celular</label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">+569</div>
-                            <input type="text" class="form-control" id="confirm-phone">
+                        <div class="mb-3">
+                            <label for="serial-number" class="form-label">Número de serie o Documento</label>
+                            <input type="text" class="form-control" id="serial-number" placeholder="123456789">
+                            <p id="validation-serial-number"></p>
                         </div>
-                    </div>
-                    <p id="validation-confirm-phone"></p>
-                    <button type="submit" onclick="saveData()" class="btn btn-primary float-right mb-3">Siguiente</button>
-                </form>
+                        <div class="mb-3">
+                            <label for="confirm-serial-number" class="form-label">Confirmar Número de serie o Documento</label>
+                            <input type="text" class="form-control" id="confirm-serial-number" placeholder="123456789">
+                            <p id="validation-confirm-serial-number"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="ejemplo@tuemail.com">
+                            <p id="validation-email"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm-email" class="form-label">Confirmar E-mail</label>
+                            <input type="email" class="form-control" id="confirm-email" placeholder="ejemplo@tuemail.com">
+                            <p id="validation-confirm-email"></p>
+                        </div>
+                        <label for="phone" class="form-label">Número de Celular</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+569</div>
+                                <input type="text" class="form-control" id="phone" placeholder="12345678">
+                            </div>
+                        </div>
+                        <p id="validation-phone"></p>
+                        <label for="confirm-phone" class="form-label">Confirmar Número de Celular</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+569</div>
+                                <input type="text" class="form-control" id="confirm-phone" placeholder="12345678">
+                            </div>
+                        </div>
+                        <p id="validation-confirm-phone"></p>
+                        <button type="button" onclick="saveDataClient()" class="btn btn-warning float-right mb-3"><a data-scroll-goto='1'>Siguiente</a></button>
+                    </form>
+                </div>
             </div>
+    </section>
 
-            <div class="col-6 mb-4" id="second-part">
-                <h1 class="mb-4">Elige la modalidad de pago</h1>
-                <form name="client-bank-account">
-                    <div class="form-group">
-                        <label for="type-account">Select list:</label>
-                        <select class="form-control" id="type-account">
-                            <option>Cuenta Corriente</option>
-                            <option>Cuenta Vista</option>
-                            <option>Cuenta de Ahorro</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="account" class="form-label">Número de Cuenta</label>
-                        <input type="text" class="form-control" id="account" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="amount" class="form-label">Monto a retirar</label>
-                        <input type="number" class="form-control" id="amount" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary float-right mb-3">Siguiente</button>
-                </form>
+    <section data-scroll-index="1" class="py-4">
+        <div class="container border border-warning rounded" id="part-two">
+            <div class="row py-5">
+                <div class="col-6 mx-auto">
+                    <h1 class="mb-4">Elige la modalidad de pago</h1>
+                    <form name="client-bank-account">
+                        <div class="form-group">
+                            <label for="type-account">Tipo de cuenta:</label>
+                            <select class="form-control" id="type-account">
+                                <option>Cuenta Corriente</option>
+                                <option>Cuenta Vista</option>
+                                <option>Cuenta Rut</option>
+                                <option>Cuenta de Ahorro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="account" class="form-label">Número de Cuenta</label>
+                            <input type="text" class="form-control" id="account" required>
+                            <p class="error" id="validation-account"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Monto a retirar</label>
+                            <input type="number" class="form-control" id="amount" required>
+                            <p id="validation-amount"></p>
+                        </div>
+                        <button type="button" onclick="saveDataTransaction()" class="btn btn-warning float-right mb-3"><a data-scroll-goto='2'>Siguiente</a></button>
+                    </form>
+                </div>
             </div>
-
         </div>
+    </section>
+
+    <section data-scroll-index="2" class="py-4">
+        <div class="container border border-warning rounded" id="part-three">
+            <div class="row py-5">
+                <div class="col-6 mx-auto">
+                    <h4 class="d-block">Transferencia exitosa</h4>
+                    <span>Guarde su comprobante por si las moscas</span>
+                    <div class="d-block">
+                        <span><b>Rut: </b></span> <span id="display-rut"> </span>
+                    </div>
+                    <div class="d-block">
+                        <span><b>Correo: </b></span> <span id="display-email"> </span>
+                    </div>
+                    <div class="d-block">
+                        <span><b>Celular: </b></span> <span id="display-phone"> </span>
+                    </div>
+                    <div class="d-block">
+                        <span><b>Tipo de cuenta: </b><span id="display-type-account"> </span>
+                    </div>
+                    <div class="d-block">
+                        <span><b>Número de Cuenta: </b><span id="display-accout"> </span>
+                    </div>
+                    <div class="d-block">
+                        <span><b>Monto a retirar: </b><span id="display-amount"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white bg-warning" style="background-color: #45637d;">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Iframe -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/e2efTsCcTmA" title="AFP, La gran estafa" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Iframe -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 last-banner" ">
+            © 2020 Todos los derechos Reservados:
+            <a class="text-white " href="https://github.com/matipohl/TDigital ">Github</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
     </div>
 </body>
 

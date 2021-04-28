@@ -21,7 +21,7 @@ function rutValidator() {
             return null;
         }
     } else {
-        retromsg.innerHTML = "Ingrese un el RUT de manera correcta";
+        retromsg.innerHTML = "Ingrese un Rut válido";
         retromsg.style.color = "Red";
         inputrut.style = "border-color: Red;";
         return null;
@@ -170,23 +170,138 @@ function detectEqualPhone() {
 }
 
 /****************************
-SAVING DATA
+NUMBER ACCOUNT 
 *****************************/
 
+function numberAccountValidator() {
+    let account = document.getElementById("account").value;
+    let typeAccount = document.getElementById("type-account").selectedIndex;
+    let rut = document.getElementById("rut").value;
+    // var listAccountType = document.getElementById("type-account").value;
+    let retromsg = document.getElementById("validation-account");
+    let inputa = document.getElementById("account");
 
-function saveData() {
-    let client = {}
-
-    if (rutValidator != null && serialNumberValidator != null && detectEqualSerialNumber != null && emailValidator != null && detectEqualEmail != null && phoneValidator != null && detectEqualPhone != null) {
-        client.rut = rutValidator;
-        client.serialNumber = serialNumberValidator;
-        client.email = emailValidator;
-        client.phone = phoneValidator;
-        console.log(client);
+    if (typeAccount == 0 || typeAccount == 1 || typeAccount == 3) {
+        let patt = /^([0-9]{11})$/i;
+        if (patt.test(account) == true) {
+            retromsg.innerHTML = "Cuenta ingresada correctamente";
+            retromsg.style.color = "Green";
+            inputa.style = "border-color: Green";
+            return account;
+        } else {
+            retromsg.innerHTML = "Cuenta inválida";
+            retromsg.style.color = "Red";
+            inputa.style = "border-color: Red";
+            return null;
+        }
     } else {
-        //HACER ALGO ACÁ
+        if (account == rut.slice(0, -1)) {
+            retromsg.innerHTML = "Cuenta ingresada correctamente";
+            retromsg.style.color = "Green";
+            inputa.style = "border-color: Green";
+            return account;
+        } else {
+            retromsg.innerHTML = "Cuenta inválida";
+            retromsg.style.color = "Red";
+            inputa.style = "border-color: Red";
+            return null;
+        }
     }
 }
 
+/****************************
+AMOUNT 
+*****************************/
 
-//guardar los datos de la cuenta del cliente.// Example starter JavaScript for disabling form submissions if there are invalid fields
+function amountValidator() {
+    let amount = parseInt(document.getElementById("amount").value);
+    let retromsg = document.getElementById("validation-amount");
+    let inputa = document.getElementById("amount");
+    let patt = /^[0-9]{1,}$/;
+
+    if (patt.test(amount) == true) {
+        if (amount > 0 && amount <= 4500000) {
+            retromsg.innerHTML = "Monto ingresado correctamente";
+            retromsg.style.color = "Green";
+            inputa.style = "border-color: Green";
+            return amount;
+        } else {
+            retromsg.innerHTML = "Ingrese un monto positivo que no exceda los 4500000";
+            retromsg.style.color = "Red";
+            inputa.style = "border-color: Red";
+            return null;
+        }
+    } else {
+        retromsg.innerHTML = "Monto inválido";
+        retromsg.style.color = "Red";
+        inputa.style = "border-color: Red";
+        return null;
+    }
+}
+
+/****************************
+SAVING DATA
+*****************************/
+function saveDataClient() {
+    let client = {};
+
+    if (rutValidator() != null && serialNumberValidator() != null && detectEqualSerialNumber() != null && emailValidator() != null && detectEqualEmail() != null && phoneValidator() != null && detectEqualPhone() != null) {
+        client.rut = rutValidator();
+        client.serialNumber = serialNumberValidator();
+        client.email = emailValidator();
+        client.phone = phoneValidator();
+        showSectionTwo();
+        return client;
+    } else {
+        return null;
+    }
+}
+
+function saveDataTransaction() {
+    let bankTransaction = {};
+    let accountType = document.getElementById("type-account").value;
+    if (numberAccountValidator() != null && amountValidator != null) {
+        bankTransaction.accountType = accountType;
+        bankTransaction.numberAccount = numberAccountValidator();
+        bankTransaction.amount = amountValidator();
+        showData(saveDataClient(), bankTransaction);
+        showSectionThree();
+    } else {
+        return null;
+    }
+}
+
+/****************************
+SHOW PARTS
+*****************************/
+function showSectionTwo() {
+    let partTwo = document.getElementById("part-two");
+    partTwo.style = "display: block";
+}
+
+function showSectionThree() {
+    let partThree = document.getElementById("part-three");
+    partThree.style = "display: block";
+}
+/****************************
+SHOW DATA
+*****************************/
+
+function showData(client, bankTransaction) {
+    let rut = document.getElementById("display-rut");
+    let email = document.getElementById("display-email");
+    let phone = document.getElementById("display-phone");
+
+    let accountType = document.getElementById("display-type-account");
+    let account = document.getElementById("display-accout");
+    let amount = document.getElementById("display-amount");
+
+    console.log(document.getElementById("display-type-account"));
+
+    rut.innerHTML = client.rut;
+    email.innerHTML = client.email;
+    phone.innerHTML = client.phone;
+    accountType.innerHTML = bankTransaction.accountType;
+    account.innerHTML = bankTransaction.numberAccount;
+    amount.innerHTML = bankTransaction.amount;
+}
