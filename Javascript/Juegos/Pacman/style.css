@@ -27,6 +27,13 @@ div.coin {
     background: url("../Pacman/images/coin.gif");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+}
+
+div.cherry {
+    background: url("../Pacman/images/cherry.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 div#pacman {
@@ -41,7 +48,30 @@ div#pacman {
     left: 20px;
 }
 
+div#ghost {
+    background: url("../Pacman/images/ghost.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 div#score {
+    border: 1px solid white;
+    width: 30px;
+    height: 20px;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 75px;
+}
+
+div#lives {
     border: 1px solid white;
     width: 30px;
     height: 20px;
