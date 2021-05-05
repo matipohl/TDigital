@@ -79,14 +79,14 @@ document.onkeydown = function(e) {
     if (e.key == "ArrowRight" && world[pacman.y][pacman.x + 1] != 2) {
         pacman.x++;
         document.getElementById("pacman").style.transform = "rotate(180deg)";
-        if (world[pacman.y][pacman.x] == world[ghost.y][ghost.x]) {
+        if (pacman.y == ghost.y && pacman.x == ghost.x) {
             lives--;
             displayLives();
         }
     } else if (e.key == "ArrowLeft" && world[pacman.y][pacman.x - 1] != 2) {
         pacman.x--;
         document.getElementById("pacman").style.transform = "rotate(0deg)";
-        if (world[pacman.y][pacman.x] == world[ghost.y][ghost.x]) {
+        if (pacman.y == ghost.y && pacman.x == ghost.x) {
             lives--;
             displayLives();
         }
@@ -94,14 +94,14 @@ document.onkeydown = function(e) {
     } else if (e.key == "ArrowUp" && world[pacman.y - 1][pacman.x] != 2) {
         pacman.y--;
         document.getElementById("pacman").style.transform = "rotate(90deg)";
-        if (world[pacman.y][pacman.x] == world[ghost.y][ghost.x]) {
+        if (pacman.y == ghost.y && pacman.x == ghost.x) {
             lives--;
             displayLives();
         }
     } else if (e.key == "ArrowDown" && world[pacman.y + 1][pacman.x] != 2) {
         pacman.y++;
         document.getElementById("pacman").style.transform = "rotate(270deg)";
-        if (world[pacman.y][pacman.x] == world[ghost.y][ghost.x]) {
+        if (pacman.y == ghost.y && pacman.x == ghost.x) {
             lives--;
             displayLives();
         }
