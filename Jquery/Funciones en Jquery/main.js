@@ -1,7 +1,7 @@
 $(document).ready(function() {
     //Addclass
     $('button.add-class').click(function() {
-        $("p").css("color", "red");
+        $("p#red").css("color", "red");
     });
 
     //ToggleImage
