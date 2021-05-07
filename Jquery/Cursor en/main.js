@@ -7,5 +7,4 @@ $(document).ready(function() {
         $(this).attr("src", altSrc);
         $(this).attr("data-alt-src", src);
     })
-
 });
