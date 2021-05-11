@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Funciones en Jquery</title>
+</head>
+
+<body>
+    <div class="container text-center ">
+        <div class="jumbotron">
+            <h1>¿Qué prefieres?</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-2 col-form-label font-weight-bold">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0 font-weight-bold">¿Qué prefieres?</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="ppalta" value="Pan con Palta">
+                                <label class="form-check-label" for="ppalta">
+                                    Pan con Palta
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="pqueso" value="Pan con Queso">
+                                <label class="form-check-label" for="pqueso">
+                                    Pan con Queso 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="phuevo" value="Pan con Huevo">
+                                <label class="form-check-label" for="phuevo">
+                                    Pan con Huevo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="button" class="btn btn-success" id="vote">Votar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Votación</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
