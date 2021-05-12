@@ -10,24 +10,7 @@ class Vote {
 
 var voters = [];
 
-//VOTACIÓN
-//Crear una nueva votación
-//agregarlos a la lista voters
-
-
-//TABLA
-//Revisar la lista voters
-//agregar cada elemento a la tabla
-
-//Eliminar Votación
-//Seleccionarlo por el índice
-//Eliminarlo de la lista
-//Actualizar tabla
-
-//Editar Votación
-//Seleccionarlo por el índice
-//Crear un modal 
-//Llamar los datos y actualizar las variables
+var id;
 
 function addVote() {
     let name = $("input#name").val();
@@ -37,6 +20,32 @@ function addVote() {
     return voters;
 }
 
+function getIndex(id) {
+    return parseInt(id.charAt(0));
+}
+
+function deleteVote(index) {
+    voters.splice(index, 1);
+    loadTable(voters);
+}
+
+function showVote(index) {
+    $('form').find("input[type=text]").attr("placeholder", voters[index].name);
+    $('input:radio[name="modalGridRadios"][value="' + voters[index].option + '"]').attr('checked', true);
+    id = index;
+}
+
+function updateVote() {
+    let name = $("input#edit-name").val();
+    let option = $("input[name='modalGridRadios']:checked").val();
+    voters[id].name = name;
+    voters[id].option = option;
+    console.log(voters[id]);
+    $('.modal').modal('toggle');
+    loadTable(voters);
+}
+
+
 function loadTable(voters) {
     let output = "";
 
@@ -44,30 +53,29 @@ function loadTable(voters) {
         output += "<tr>"
         output += "<td>" + voters[i].name + "</td>";
         output += "<td>" + voters[i].option + "</td>";
-        output += "<td><button type='button' class='btn btn-warning'>Editar </button> <button type='button' class='btn btn-danger'>Eliminar </button></td>"
+        output += "<td><button type='button' data-toggle='modal' data-target='#edit-vote' class='btn btn-warning' id='" + i + "-edit'>Editar </button> <button type='button' id='" + i + "-delete' class='btn btn-danger'>Eliminar </button></td>"
         output += "/<tr>"
     }
     $("tbody").html(output);
 }
 
 $(document).ready(function() {
-
     $("#vote").click(function() {
         addVote();
         loadTable(voters);
     });
 
-    //Eliminar Votación
-    //Seleccionarlo por el índice
-    //Eliminarlo de la lista
-    //Actualizar tabla
-
-    $("button.btn-danger").click(function() {
-        console.log($(this).siblings().val());
+    $(document).on("click", ".btn-danger", function() {
+        let index = getIndex($(this).attr("id"));
+        deleteVote(index);
     });
 
-    //Editar Votación
-    //Seleccionarlo por el índice
-    //Crear un modal 
-    //Llamar los datos y actualizar las variables
+    $(document).on("click", ".btn-warning", function() {
+        let index = getIndex($(this).attr("id"));
+        showVote(index);
+    });
+
+    $(document).on("click", ".save", function() {
+        updateVote();
+    });
 });

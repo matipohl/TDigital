@@ -12,6 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Funciones en Jquery</title>
 </head>
 
@@ -78,9 +81,58 @@
             </div>
         </div>
 
+        <div class="modal fade" id="edit-vote" tabindex="-1" role="dialog" aria-labelledby="editVote" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editVote">Editar voto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-2 col-form-label font-weight-bold">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="edit-name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0 font-weight-bold">¿Qué prefieres?</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="modalGridRadios" id="edit-ppalta" value="Pan con Palta">
+                                        <label class="form-check-label" for="ppalta">
+                                            Pan con Palta
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="modalGridRadios" id="edit-pqueso" value="Pan con Queso">
+                                        <label class="form-check-label" for="pqueso">
+                                            Pan con Queso 
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="modalGridRadios" id="edit-phuevo" value="Pan con Huevo">
+                                        <label class="form-check-label" for="phuevo">
+                                            Pan con Huevo
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary save">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <script src="main.js"></script>
+    <script src="charts.js"></script>
 </body>
 
 </html>
