@@ -60,14 +60,18 @@ function loadTable(voters) {
 }
 
 $(document).ready(function() {
+    $("#piechart").hide();
     $("#vote").click(function() {
         addVote();
         loadTable(voters);
+        $("#piechart").show(200);
+        drawChart();
     });
 
     $(document).on("click", ".btn-danger", function() {
         let index = getIndex($(this).attr("id"));
         deleteVote(index);
+        drawChart();
     });
 
     $(document).on("click", ".btn-warning", function() {
@@ -77,5 +81,6 @@ $(document).ready(function() {
 
     $(document).on("click", ".save", function() {
         updateVote();
+        drawChart();
     });
 });
