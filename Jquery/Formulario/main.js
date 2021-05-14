@@ -46,6 +46,7 @@ function updateVote() {
 }
 
 
+
 function loadTable(voters) {
     let output = "";
 
