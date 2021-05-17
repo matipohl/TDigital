@@ -17,20 +17,6 @@ function clearData() {
     $("div.border-danger").html("");
 }
 
-function getPokemonData(id) {
-
-    $.get("https://pokeapi.co/api/v2/pokemon/" + id + "/", function(res) {
-        pokemon.nombre = res.name;
-        pokemon.img = res.sprites.front_default;
-        for (var i = 0; i < res.types.length; i++) {
-            pokemon.tipos[i] = res.types[i].type.name;
-        }
-        pokemon.altura = res.height;
-        pokemon.peso = res.weight;
-    }, "json");
-    return pokemon;
-}
-
 function showPokemonData(id) {
     let border = "div.border-danger";
     clearData();
