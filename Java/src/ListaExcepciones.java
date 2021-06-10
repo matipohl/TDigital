@@ -15,5 +15,4 @@ public class ListaExcepciones {
 			System.out.println("¡No puedo castear cualquier cosa!");
 		}
 	}
-
 }
