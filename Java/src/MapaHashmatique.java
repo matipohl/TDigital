@@ -18,9 +18,8 @@ public class MapaHashmatique {
 		mh.printSongs();
 	}
 
-	HashMap<String,String> addSong(String title, String lyrics){
+	void addSong(String title, String lyrics){
 		track.put(title,lyrics);
-		return track;
 	}
 
 	String getSong(String title){
