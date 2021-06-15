@@ -1,7 +1,9 @@
+package ProjectClass;
+
 import java.util.ArrayList;
 
 public class Portfolio {
-	private ArrayList<Project> projects = new ArrayList<Project>();
+	private ArrayList<Project> projects = new ArrayList<>();
 
 	public Portfolio() {
 

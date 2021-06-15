@@ -1,3 +1,5 @@
+package ProjectClass;
+
 public class ProjectTest {
 	public static void main(String[] args) {
 		Project elevatorPitch = new Project();
