@@ -4,7 +4,7 @@ public class Mammal {
 	private int energy;
 
 	public Mammal(){
-		energy = 100;
+
 	}
 
 	public int getEnergy() {
@@ -12,11 +12,7 @@ public class Mammal {
 	}
 
 	public void setEnergy(int energy) {
-		if(energy > 100){
-			this.energy = 100;
-		} else{
 		this.energy = energy;
-		}
 	}
 
 	public void displayEnergy(){
@@ -27,4 +23,8 @@ public class Mammal {
 		setEnergy(energy+amount);
 	}
 
+	public void sleep(){
+		setEnergy(100);
+		System.out.println("El animal está durmiendo");
+	}
 }

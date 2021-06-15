@@ -2,9 +2,13 @@ package zoo;
 
 public class Gorilla extends Mammal{
 
+	public Gorilla(){
+		setEnergy(100);
+	}
+
 	public void throwSomething(){
 		int energy = getEnergy();
-		if(energy <= 0){
+		if(energy < 0){
 			sleep();
 		} else{
 			manageEnergy(-5);
@@ -14,7 +18,7 @@ public class Gorilla extends Mammal{
 
 	public void eatBananas(){
 		int energy = getEnergy();
-		if(energy <= 0){
+		if(energy < 0){
 			sleep();
 		} else {
 			manageEnergy(10);
@@ -24,17 +28,11 @@ public class Gorilla extends Mammal{
 
 	public void climb(){
 		int energy = getEnergy();
-		if(energy <= 0){
+		if(energy < 0){
 			sleep();
 		} else {
 			manageEnergy(-10);
 			System.out.println("El gorila trepa");
 		}
 	}
-
-	public void sleep(){
-		this.setEnergy(100);
-		System.out.println("El gorila está durmiendo");
-	}
-
 }
