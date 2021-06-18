@@ -17,10 +17,5 @@ public class Test {
 		System.out.println(pokedex.pokemonInfo(bulb));
 		System.out.println(pokedex.pokemonInfo(charm));
 
-
-
-
-
-
 	}
 }
