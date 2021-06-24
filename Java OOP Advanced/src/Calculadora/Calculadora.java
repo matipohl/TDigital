@@ -1,12 +1,14 @@
 package Calculadora;
 
-public class Calculadora implements java.io.Serializable {
-	private String operación;
-	private double valor1;
-	private double valor2;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
-	public Calculadora() {
-	}
+public class Calculadora implements java.io.Serializable {
+	private String operación = "";
+	private Object result;
+	ScriptEngineManager manager = new ScriptEngineManager();
+	ScriptEngine engine = manager.getEngineByName("js");
 
 	public String getOperación() {
 		return operación;
@@ -16,30 +18,28 @@ public class Calculadora implements java.io.Serializable {
 		this.operación = operación;
 	}
 
-	public double getValor1() {
-		return valor1;
+	public Calculadora(){
+
 	}
 
-	public void setValor1(double valor1) {
-		this.valor1 = valor1;
-	}
-
-	public double getValor2() {
-		return valor2;
-	}
-
-	public void setValor2(double valor2) {
-		this.valor2 = valor2;
-	}
-
-	public double performOperation(){
-		if(operación == "+")
-			return valor1+valor2;
+	public void performOperation(String cadena) {
+		if(cadena != "=")
+			operación = operación + cadena;
 		else
-			return valor1-valor2;
+		{
+			evaluate(operación);
+		}
 	}
 
-	public void getResult(){
-		System.out.println(performOperation());
+	public void evaluate(String cadena)  {
+		try {
+			System.out.println(engine.eval(operación));
+		} catch (ScriptException e) {
+			e.printStackTrace();
+		}
 	}
+
+
+
+
 }
