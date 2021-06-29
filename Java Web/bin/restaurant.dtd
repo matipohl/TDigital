@@ -1,0 +1,6 @@
+<!ELEMENT lunchMenu (item+)>
+<!ELEMENT item (name,description,price)>
+<!ATTLIST item category NMTOKEN #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
