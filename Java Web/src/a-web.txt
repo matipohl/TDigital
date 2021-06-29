@@ -1,1 +1,3 @@
-Dada una request del navegador, el servlet permite seleccionar la acción correspondiente de la web-app y ejecutarla en java.
+Dada una request del navegador, el servlet permite seleccionar la acción correspondiente de la web-app y ejecutarla en java. 
+Esto permitirá la selección de vista JSP, creando un forward request, para finalmente crear un responde al cliente a traves de JSP. 
+
