@@ -5,17 +5,17 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class Calculadora implements java.io.Serializable {
-	private String operación = "";
+	private String operacion = "";
 	private Object result;
 	ScriptEngineManager manager = new ScriptEngineManager();
 	ScriptEngine engine = manager.getEngineByName("js");
 
-	public String getOperación() {
-		return operación;
+	public String getOperacion() {
+		return operacion;
 	}
 
-	public void setOperación(String operación) {
-		this.operación = operación;
+	public void setOperacion(String operacion) {
+		this.operacion = operacion;
 	}
 
 	public Calculadora(){
@@ -24,16 +24,16 @@ public class Calculadora implements java.io.Serializable {
 
 	public void performOperation(String cadena) {
 		if(cadena != "=")
-			operación = operación + cadena;
+			operacion = operacion + cadena;
 		else
 		{
-			evaluate(operación);
+			evaluate(operacion);
 		}
 	}
 
 	public void evaluate(String cadena)  {
 		try {
-			System.out.println(engine.eval(operación));
+			System.out.println(engine.eval(operacion));
 		} catch (ScriptException e) {
 			e.printStackTrace();
 		}

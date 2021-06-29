@@ -39,6 +39,7 @@ public class Project {
 		this.initialCost = initialCost;
 	}
 
+
 	@Override
 	public String toString() {
 		return "nombre (" + initialCost + ") ='" + nombre + '\'' + ", descripcion='" + descripcion + '\'' + ", initialCost=" + initialCost;
